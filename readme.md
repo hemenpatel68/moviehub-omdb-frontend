@@ -1,4 +1,4 @@
-# 🎬 MovieHub - OMDb Frontend Web App
+# 🎬 MovieHub - Movie Discovery Web App
 
 MovieHub is a responsive frontend web application that allows users to search for movies and view detailed information fetched from the OMDb API. Built using HTML, CSS, JavaScript, and Bootstrap, it offers a clean and interactive interface for exploring movie content.
 

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieHub - Favorites</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <i class="fas fa-film me-2"></i>
+        <span class="fw-bold">MovieHub</span>
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="favorites.html">Favorites</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container py-4">
+    <h2 class="mb-4">Your Favorite Movies</h2>
+    
+    <!-- No Favorites Message -->
+    <div id="noFavoritesMessage" class="d-none">
+      <div class="text-center my-5 py-5">
+        <h4 class="mb-3">No favorites yet</h4>
+        <p class="lead mb-4">
+          Browse movies and click the heart icon to add them to your favorites
+        </p>
+        <a href="index.html" class="btn btn-primary">
+          Search Movies
+        </a>
+      </div>
+    </div>
+    
+    <!-- Favorites Grid -->
+    <div id="favoritesGrid" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <!-- Favorite movie cards will be populated here -->
+    </div>
+  </div>
+
+  <!-- Movie Details Modal -->
+  <div class="modal fade" id="movieModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="movieTitle"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="movieDetails">
+          <!-- Movie details will be populated here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" id="removeButton">
+            Remove from Favorites
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-3 mt-4">
+    <div class="container text-center">
+      <p class="text-muted mb-0">
+        &copy; 2025 MovieHub | Powered by <a href="https://www.omdbapi.com/" target="_blank" class="text-decoration-none">OMDb API</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="favorites.js"></script>
+</body>
+</html>
